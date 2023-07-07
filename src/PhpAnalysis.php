@@ -56,7 +56,7 @@ class PhpAnalysis
     protected bool $isLoadAll = false;
 
     //主词典词语最大长度 x / 2
-    private int $dicWordMax = 14;
+    protected int $dicWordMax = 14;
     //粗分后的数组（通常是截取句子等用途）
     private array $simpleResult = [];
     //最终结果(用空格分开的词汇列表)
@@ -70,6 +70,18 @@ class PhpAnalysis
     //词库载入时间
     public int $loadTime = 0;
     protected array $finallyIndex;
+
+    /**
+     * 设置每个分词的最大字数
+     * @param int $dicWordMax
+     * @return $this
+     * Created by xiaobai at 2023/7/7 18:01
+     */
+    public function setDicWordMax(int $dicWordMax): static
+    {
+        $this->dicWordMax = $dicWordMax * 2;
+        return $this;
+    }
 
     /**
      * 构造函数
