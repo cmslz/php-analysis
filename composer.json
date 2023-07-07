@@ -1,0 +1,30 @@
+{
+  "name": "cmslz/php-analysis",
+  "description": "PHP分词",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "php"
+  ],
+  "suggest": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Cmslz\\PhpAnalysis\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "authors": [
+    {
+      "name": "heqiangchun"
+    }
+  ],
+  "require": {
+    "ext-iconv": "*"
+  },
+  "require-dev": {
+  },
+  "extra": {
+  }
+}
